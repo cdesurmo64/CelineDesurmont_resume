@@ -1,0 +1,11 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.my-hobbies {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
