@@ -1,11 +1,44 @@
+/*idées couleurs :*/
+/*1. claire : EEC0C0*/
+/*   foncé : 47464B*/
+
+/*2. claire : DCADBB*/
+/*   foncé : 3E4F61*/
+
+/*3. claire : 7CCFD2*/
+/* foncé : 2E3941*/
+
+/*4. claire : FFCDB6*/
+/* foncé : 434750*/
+
+.colored {
+    background-color: #FFCDB6;
+}
+
+.dark {
+    background-color: #434750;
+    color: #FFCDB6;
+}
+
 .img-fluid {
     max-width: 100%;
     height: auto;
+    border-radius: 50%;
+    border: 4px solid;
 }
 
+.first-name {
+    color: #FFCDB6;
+}
 
 .my-hobbies {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+}
+
+.my-hobbies i {
+    border-radius: 50%;
+    border: 1px solid;
+    color: #434750;
 }
