@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap-reboot.min.css">
         <!----------To load bootstrap grid-->
         <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap-grid.min.css">
+        <!--        To load JQuery library-->
+        <script src="libraries/jquery/jquery-3.3.1.slim.min.js"></script>
+        <!----------To load javascript in bootstrap-->
+        <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
         <!----------To load the style sheet-->
         <link rel="stylesheet" href="style.css">
         <!----------To load font awesome -->
@@ -23,7 +27,7 @@
             <!------------Header containing my photo, my name and my job-->
             <header class="header-resume">
                 <div class="row no-gutters row-header">
-                    <div class="col-lg-4 colored">
+                    <div class="col-lg-4 colored-except-mobile">
                         <div id="photo">
                             <img src="images/celine_desurmont.jpg" width="220" alt="Ma photo" class="img-fluid">
                         </div>
@@ -44,43 +48,67 @@
 
                         <!------------------------CONTACT INFORMATION-->
                         <section id="contact">
-                            <h2 class="dark">CONTACT</h2>
-                            <ul>
-                                <li>Adresse
-                                    <address>Biarritz, France</address>
-                                </li>
-                                <li>Téléphone
-                                    <div class="phone-number"><a href="tel:+33676866906">06 76 86 69 06</a></div>
-                                </li>
-                                <li>Email
-                                    <div class="email"><a href="mailto:cdesurmo@gmail.com">cdesurmo@gmail.com</a></div>
-                                </li>
-                                <li>GitHub
-                                    <div class="github"><a href="https://github.com/cdesurmo64">cdesurmo64</a></div>
-                                </li>
-                                <li>Skype
-                                    <div class="skype"><a href="skype:cdesurmo?chat">@cdesurmo</a></div>
-                                </li>
-                            </ul>
+                            <h2 class="dark">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#contact-mobile-collapsed" aria-expanded="false" aria-controls="contact-mobile-collapsed">
+                                    CONTACT
+                                    <span class="arrow"><i class="fas fa-angle-down"></i></span>
+                                </button>
+                            </h2>
+                            <div id="contact-mobile-collapsed" class="collapse dont-collapse-sm">
+                                <ul>
+                                    <li>Adresse
+                                        <address>Biarritz, France</address>
+                                    </li>
+                                    <li>Téléphone
+                                        <div class="phone-number"><a href="tel:+33676866906">06 76 86 69 06</a></div>
+                                    </li>
+                                    <li>Email
+                                        <div class="email"><a href="mailto:cdesurmo@gmail.com">cdesurmo@gmail.com</a></div>
+                                    </li>
+                                    <li>GitHub
+                                        <div class="github"><a href="https://github.com/cdesurmo64">cdesurmo64</a></div>
+                                    </li>
+                                    <li>Skype
+                                        <div class="skype"><a href="skype:cdesurmo?chat">@cdesurmo</a></div>
+                                    </li>
+                                </ul>
+                            </div>
                         </section>
+
 
                         <!------------------------ABOUT ME-->
                         <section id="about">
-                            <h2 class="dark">À PROPOS DE MOI</h2>
-                            <p class="about-me">Après l'obtention de mon diplôme d'ingénieure agronome, je me suis orientée vers le monde de la recherche en biologie marine. Suite à plusieurs expériences dans ce milieu, j'ai décidé de me reconvertir et de m'investir à 100% dans un autre domaine qui me captivait depuis longtemps : l'informatique et le web.
-                                <br>Aujourd'hui développeuse web suite à la validation de ma formation en alternance, c'est en tant que freelance que je souhaite apporter mon expertise en matière d'intégration et développement de sites web.
-                                <br>Rigoureuse et très organisée, mais aussi créative, c'est avec force de proposition que je saurai vous garantir un travail de qualité et répondre à vos besoins.
-                                <br><blockquote>"Il n'y a pas de problème, il n'y a que des solutions !"</blockquote></p>
+                            <h2 class="dark">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#about-mobile-collapsed" aria-expanded="false" aria-controls="about-mobile-collapsed">
+                                    À PROPOS DE MOI
+                                    <span class="arrow"><i class="fas fa-angle-down"></i></span>
+                                </button>
+                            </h2>
+                            <div id="about-mobile-collapsed" class="collapse dont-collapse-sm">
+                                <p class="about-me">Après l'obtention de mon diplôme d'ingénieure agronome, je me suis orientée vers le monde de la recherche en biologie marine. Suite à plusieurs expériences dans ce milieu, j'ai décidé de me reconvertir et de m'investir à 100% dans un autre domaine qui me captivait depuis longtemps : l'informatique et le web.
+                                    <br>Aujourd'hui développeuse web suite à la validation de ma formation en alternance, c'est en tant que freelance que je souhaite apporter mon expertise en matière d'intégration et développement de sites web.
+                                    <br>Rigoureuse et très organisée, mais aussi créative, c'est avec force de proposition que je saurai vous garantir un travail de qualité et répondre à vos besoins.
+                                    <br>
+                                <blockquote>"Il n'y a pas de problème, il n'y a que des solutions !"</blockquote>
+                                </p>
+                            </div>
                         </section>
 
                         <!------------------------MY HOBBIES-->
                         <section id="hobbies">
-                            <h2 class="dark">LOISIRS</h2>
-                            <ul class="my-hobbies">
-                                <li class="hobby"><span class="hobby-circle"><i class="fas fa-volleyball-ball"></i></span></li>
-                                <li class="hobby"><span class="hobby-circle"><i class="fas fa-biking"></i></span></li>
-                                <li class="hobby"><span class="hobby-circle"><i class="fas fa-gamepad"></i></span></li>
-                            </ul>
+                            <h2 class="dark">
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#hobbies-mobile-collapsed" aria-expanded="false" aria-controls="hobbies-mobile-collapsed">
+                                    LOISIRS
+                                    <span class="arrow"><i class="fas fa-angle-down"></i></span>
+                                </button>
+                            </h2>
+                            <div id="hobbies-mobile-collapsed" class="collapse dont-collapse-sm">
+                                <ul class="my-hobbies">
+                                    <li class="hobby"><span class="hobby-circle"><i class="fas fa-volleyball-ball"></i></span></li>
+                                    <li class="hobby"><span class="hobby-circle"><i class="fas fa-biking"></i></span></li>
+                                    <li class="hobby"><span class="hobby-circle"><i class="fas fa-gamepad"></i></span></li>
+                                </ul>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -98,11 +126,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 dot">
+                                                <div class="col-1 col-lg-2 dot">
                                                     <i class="far fa-dot-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>2020 <br>À distance</p>
+                                                <div class="col-11  col-lg-10">
+                                                    <p>2020 <span class="place">À distance</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,11 +153,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 circle">
+                                                <div class="col-1 col-lg-2 circle">
                                                     <i class="fas fa-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>2015 - 2018 <br>Rennes</p>
+                                                <div class="col-11 col-lg-10">
+                                                    <p>2015 - 2018 <span class="place">Rennes</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -152,11 +180,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 circle">
+                                                <div class="col-1 col-lg-2 circle">
                                                     <i class="fas fa-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>2012 - 2015 <br>Toulouse</p>
+                                                <div class="col-11 col-lg-10">
+                                                    <p>2012 - 2015 <span class="place">Toulouse</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -184,11 +212,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 dot">
+                                                <div class="col-1 col-lg-2 dot">
                                                     <i class="far fa-dot-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>2020 - Poste actuel <br>En remote</p>
+                                                <div class="col-11 col-lg-10">
+                                                    <p>2020 - Poste actuel <span class="place">En remote</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -212,11 +240,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 circle">
+                                                <div class="col-1 col-lg-2 circle">
                                                     <i class="fas fa-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>Sept - Nov 2019 <br>Brest</p>
+                                                <div class="col-11 col-lg-10">
+                                                    <p>Sept - Nov 2019 <span class="place">Brest</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,11 +268,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 circle">
+                                                <div class="col-1 col-lg-2 circle">
                                                     <i class="fas fa-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>Oct 2018 - Déc 2019 <br>Brest</p>
+                                                <div class="col-11 col-lg-10">
+                                                    <p>Oct 2018 - Déc 2019 <span class="place">Brest</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -268,11 +296,11 @@
                                     <div class="col-lg-4">
                                         <div class="date">
                                             <div class="row no-gutters">
-                                                <div class="col-lg-2 circle">
+                                                <div class="col-1 col-lg-2 circle">
                                                     <i class="fas fa-circle"></i>
                                                 </div>
-                                                <div class="col-lg-10">
-                                                    <p>Janv - Juin 2018 <br>Paris</p>
+                                                <div class="col-11 col-lg-10">
+                                                    <p>Janv - Juin 2018 <span class="place">Paris</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -305,7 +333,7 @@
                                         <div class="email">Email : <a href="mailto:fabien@superprof.com">fabien@superprof.com</a></div>
                                     </article>
                                 </div>
-                                <div class="offset-lg-1 col-lg-5">
+                                <div id="ref2" class="offset-lg-1 col-lg-5">
                                     <article class="reference">
                                         <header class="ref">
                                             <h3>SANDY KIEKEN</h3>
