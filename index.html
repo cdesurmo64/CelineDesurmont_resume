@@ -3,14 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>CV de Céline Desurmont</title>
+        <meta name="description" content="Voici le CV de Céline Desurmont, développeuse web freelance souhaitant vous apporter son expertise en matière d'intégration et de développement web.">
+        <link rel="icon" href="images/favicon-cd.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!----------To unify style in all browsers-->
         <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap-reboot.min.css">
         <!----------To load bootstrap grid-->
         <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap-grid.min.css">
-        <!--        To load JQuery library-->
+        <!--        To load JQuery library, needed for collapses-->
         <script src="libraries/jquery/jquery-3.3.1.slim.min.js"></script>
-        <!----------To load javascript in bootstrap-->
+        <!----------To load javascript in bootstrap, needed for collapses-->
         <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
         <!----------To load the style sheet-->
         <link rel="stylesheet" href="style.css">
@@ -27,7 +29,7 @@
             <!------------Header containing my photo, my name and my job-->
             <header class="header-resume">
                 <div class="row no-gutters row-header">
-                    <div class="col-lg-4 colored-except-mobile">
+                    <div class="col-lg-4 colored-desktop">
                         <div id="photo">
                             <img src="images/celine_desurmont.jpg" width="220" alt="Ma photo" class="img-fluid">
                         </div>
@@ -46,15 +48,16 @@
                     <!-------------My personal information-->
                     <div id="personal-information">
 
-                        <!------------------------CONTACT INFORMATION-->
+                        <!------------------------Contact info Section-->
                         <section id="contact">
                             <h2 class="dark">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#contact-mobile-collapsed" aria-expanded="false" aria-controls="contact-mobile-collapsed">
+                                <!--I use bootstrap framework to show and hide a text by clicking on a button. The framework use JavaScript to toggle two classes : one for the button named "collapsed" and one for the hidden/shown content named "show"-->
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#contact-mobile-tablet-collapsed" aria-expanded="false" aria-controls="contact-mobile-tablet-collapsed">
                                     CONTACT
                                     <span class="arrow"><i class="fas fa-angle-down"></i></span>
                                 </button>
                             </h2>
-                            <div id="contact-mobile-collapsed" class="collapse dont-collapse-sm">
+                            <div id="contact-mobile-tablet-collapsed" class="collapse dont-collapse-lg">
                                 <ul>
                                     <li>Adresse
                                         <address>Biarritz, France</address>
@@ -76,17 +79,18 @@
                         </section>
 
 
-                        <!------------------------ABOUT ME-->
+                        <!------------------------About me Section-->
                         <section id="about">
                             <h2 class="dark">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#about-mobile-collapsed" aria-expanded="false" aria-controls="about-mobile-collapsed">
+                                <!--I use bootstrap framework to show and hide a text by clicking on a button. The framework use JavaScript to toggle two classes : one for the button named "collapsed" and one for the hidden/shown content named "show"-->
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#about-mobile-tablet-collapsed" aria-expanded="false" aria-controls="about-mobile-tablet-collapsed">
                                     À PROPOS DE MOI
                                     <span class="arrow"><i class="fas fa-angle-down"></i></span>
                                 </button>
                             </h2>
-                            <div id="about-mobile-collapsed" class="collapse dont-collapse-sm">
+                            <div id="about-mobile-tablet-collapsed" class="collapse dont-collapse-lg">
                                 <p class="about-me">Après l'obtention de mon diplôme d'ingénieure agronome, je me suis orientée vers le monde de la recherche en biologie marine. Suite à plusieurs expériences dans ce milieu, j'ai décidé de me reconvertir et de m'investir à 100% dans un autre domaine qui me captivait depuis longtemps : l'informatique et le web.
-                                    <br>Aujourd'hui développeuse web suite à la validation de ma formation en alternance, c'est en tant que freelance que je souhaite apporter mon expertise en matière d'intégration et développement de sites web.
+                                    <br>Aujourd'hui développeuse web suite à la validation de ma formation en alternance, c'est en tant que freelance que je souhaite apporter mon expertise en matière d'intégration et de développement de sites web.
                                     <br>Rigoureuse et très organisée, mais aussi créative, c'est avec force de proposition que je saurai vous garantir un travail de qualité et répondre à vos besoins.
                                     <br>
                                 <blockquote>"Il n'y a pas de problème, il n'y a que des solutions !"</blockquote>
@@ -94,15 +98,16 @@
                             </div>
                         </section>
 
-                        <!------------------------MY HOBBIES-->
+                        <!------------------------My hobbies Section-->
                         <section id="hobbies">
                             <h2 class="dark">
-                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#hobbies-mobile-collapsed" aria-expanded="false" aria-controls="hobbies-mobile-collapsed">
+                                <!--I use bootstrap framework to show and hide a text by clicking on a button. The framework use JavaScript to toggle two classes : one for the button named "collapsed" and one for the hidden/shown content named "show"-->
+                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#hobbies-mobile-tablet-collapsed" aria-expanded="false" aria-controls="hobbies-mobile-tablet-collapsed">
                                     LOISIRS
                                     <span class="arrow"><i class="fas fa-angle-down"></i></span>
                                 </button>
                             </h2>
-                            <div id="hobbies-mobile-collapsed" class="collapse dont-collapse-sm">
+                            <div id="hobbies-mobile-tablet-collapsed" class="collapse dont-collapse-lg">
                                 <ul class="my-hobbies">
                                     <li class="hobby"><span class="hobby-circle"><i class="fas fa-volleyball-ball"></i></span></li>
                                     <li class="hobby"><span class="hobby-circle"><i class="fas fa-biking"></i></span></li>
@@ -114,12 +119,13 @@
                 </div>
 
 
+                <!-------------My professional information -->
                 <div class="col-lg-8 light">
-                    <!-------------My professional information -->
                     <div id="professional-information">
-                        <!------------------------MY TRAININGS-->
+                        <!------------------------My trainings section-->
                         <section id="trainings">
                             <h2><i class="fas fa-graduation-cap"></i>FORMATION</h2>
+
                             <!--------Web developer training at Openclassrooms-->
                             <article id="oc">
                                 <div class="row">
@@ -141,7 +147,7 @@
                                                 <h3>OPENCLASSROOMS</h3>
                                                 <h4>Développeuse web</h4>
                                             </header>
-                                            <p>Formation de niveau 5 (Bac +2) qui m'a permis d'acquérir les connaissances et les compétences nécessaires à l'exercice du métier de Développeuse/Intégratrice web : étude des langages web HTML, CSS et JavaScript ; mise en application des bonnes pratiques de SEO ; prise en main de la plateforme logicielle libre en JavaScript Node.js, du framework Express, et des systèmes de gestion de bases de données MongoDB et MySQL.</p>
+                                            <p>Formation de niveau 5 (Bac +2) qui m'a permis d'acquérir les connaissances et les compétences nécessaires à l'exercice du métier de Développeuse / Intégratrice web : étude des langages web HTML, CSS et JavaScript ; mise en application des bonnes pratiques de SEO ; prise en main de la plateforme logicielle libre en JavaScript Node.js, du framework Express, et des systèmes de gestion de bases de données MongoDB et MySQL.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +174,7 @@
                                                 <h3>AGROCAMPUS OUEST</h3>
                                                 <h4>Ingénieure agronome</h4>
                                             </header>
-                                            <p>Formation pluridisciplinaire de niveau 7 (Bac +5) axée sur un développement durable des ressources et des territoires. Grâce à elle, j'ai mobilisé des connaissances et des compétences dans les domaines des sciences du vivant (de la cellule aux écosystèmes), des sciences de l'ingénieur (outils informatiques, systèmes de production) et des sciences économiques (micro/macro économie), humaines et sociales.</p>
+                                            <p>Formation pluridisciplinaire de niveau 7 (Bac +5) axée sur un développement durable des ressources et des territoires. Grâce à elle, j'ai mobilisé des connaissances et des compétences dans les domaines des sciences du vivant (de la cellule aux écosystèmes), des sciences de l'ingénieur (outils informatiques, systèmes de production) et des sciences économiques (micro- et macro-économie), humaines et sociales.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -195,7 +201,7 @@
                                                 <h3>LYCÉE PIERRE DE FERMAT</h3>
                                                 <h4>Classes préparatoires BCPST</h4>
                                             </header>
-                                            <p>Formation pluridisciplinaire de haut niveau préparant aux concours des Grandes Écoles (Écoles d'Ingénieurs, ENS, Écoles Véto). J'ai ainsi acquis un solide socle de connaissances et de compétences dans trois champs disciplinaires scientifiques majeurs (SVT, Physique-Chimie et Mathématiques), ainsi qu'en Informatique et matières littéraires. </p>
+                                            <p>Formation pluridisciplinaire préparant aux concours des Grandes Écoles (Écoles d'Ingénieurs, ENS, Écoles Véto). J'ai ainsi acquis un solide socle de connaissances et de compétences dans trois champs disciplinaires scientifiques majeurs (SVT, Physique-Chimie et Mathématiques), ainsi qu'en Informatique et matières littéraires. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -203,9 +209,10 @@
                         </section>
 
 
-                        <!------------------------MY PROFESSIONAL EXPERIENCES-->
+                        <!------------------------My professional experience Section-->
                         <section id="experiences">
-                            <h2><i class="fas fa-briefcase"></i>EXPÉRIENCE PROFESSIONELLE</h2>
+                            <h2><i class="fas fa-briefcase"></i>EXPÉRIENCE PROFESSIONNELLE</h2>
+
                             <!--------Work-study contract at Superprof  -->
                             <article id="superprof">
                                 <div class="row">
@@ -283,7 +290,7 @@
                                                 <h3>IFREMER</h3>
                                                 <h4>Ingénieure de recherche</h4>
                                             </header>
-                                            <p>Missions : Participer à l'étude de la réponse thermique et de l’adaptation physiologique de l’huître creuse dans le cadre du rechauffement climatique (traitement de gros jeux de données, construction des designs expérimentaux, analyses en laboratoire, gestion et paramétrage des outils de mesure, ...)
+                                            <p>Missions : Participer à l'étude de la réponse thermique et de l’adaptation physiologique de l’huître creuse dans le cadre du rechauffement climatique (traitement de gros jeux de données, construction des designs expérimentaux, analyses en laboratoire, gestion et paramétrage des outils de mesure, ...).
                                                 <br>Compétences acquises : Analyses statistiques sous R, langage de programmation Python, différentes techniques d'analyse biologique, zootechnie, Anglais</p>
                                         </div>
                                     </div>
@@ -311,7 +318,7 @@
                                                 <h3>MNHN UMR BOREA</h3>
                                                 <h4>Ingénieure de recherche</h4>
                                             </header>
-                                            <p>Missions : Participer à l'étude de la réponse homéo-visqueuse de crevettes hydrothermales en fonction de la pression d’acclimatation (traitement de gros jeux de données, analyses en laboratoire, valorisation des résultats)
+                                            <p>Missions : Participer à l'étude de la réponse homéo-visqueuse de crevettes hydrothermales en fonction de la pression d’acclimatation (traitement de gros jeux de données, analyses en laboratoire, valorisation des résultats sous forme de publication scientifique).
                                                 <br>Compétences acquises : Analyses statistiques sous R, différentes techniques d'analyse biologique</p>
                                         </div>
                                     </div>
@@ -319,11 +326,11 @@
                             </article>
                         </section>
 
-                        <!------------------------MY REFERENCES -->
+                        <!------------------------My references Section-->
                         <section id="references">
                             <h2><i class="fas fa-pencil-alt"></i>RECOMMANDATIONS</h2>
                             <div class="row">
-                                <div class="col-lg-5">
+                                <div class="col-md-5 col-lg-5">
                                     <article class="reference">
                                         <header class="ref">
                                             <h3>FABIEN DUPUIS PLANCHARD</h3>
@@ -333,7 +340,7 @@
                                         <div class="email">Email : <a href="mailto:fabien@superprof.com">fabien@superprof.com</a></div>
                                     </article>
                                 </div>
-                                <div id="ref2" class="offset-lg-1 col-lg-5">
+                                <div id="ref2" class="offset-md-1 col-md-5 offset-lg-1 col-lg-5">
                                     <article class="reference">
                                         <header class="ref">
                                             <h3>SANDY KIEKEN</h3>

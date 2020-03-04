@@ -1,17 +1,3 @@
-/*Ideas of color*/
-/*.claire : EEC0C0*/
-/*   foncé : 47464B*/
-
-/*2. claire : DCADBB*/
-/*   foncé : 3E4F61*/
-
-/*3. claire : 7CCFD2*/
-/* foncé : 2E3941*/
-
-/*4. claire : FFCDB6*/
-/* foncé : 434750*/
-
-
 /*Titles style reset*/
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
@@ -19,60 +5,13 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -1px;
 }
 
+
 /***********STYLE FOR MOBILE************/
 
 /*Common styles*/
-.collapse {
-    display: none;
-}
-
-.collapse.show {
-    display: block;
-}
-
-@media (min-width: 576px) {
-    .collapse.dont-collapse-sm {
-        display: block;
-        height: auto !important;
-        visibility: visible;
-    }
-}
-
-button {
-    font-size: 25px;
-    font-weight: 700;
-    background-color: #47464B;
-    color: #EEC0C0;
-    border: none;
-    width: 100%;
-    position: relative;
-}
-
-button .arrow {
-    position: absolute;
-    right: 15px;
-    top: 2px;
-    width: 16px;
-    height: 16px;
-}
-
-button .arrow i {
-    transform: rotate(180deg);
-    transition: 0.2s all ease-in-out;
-}
-
-button.collapsed .arrow i {
-    transform: rotate(0deg);
-}
-
-button:focus {
-    outline: none;
-}
-
 body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
-
 
 h2 {
     font-size: 25px;
@@ -98,12 +37,14 @@ a:hover {
     text-align: justify;
 }
 
-/********PAGE HEADER STYLE********/
 
+/********Page header********/
+/*Common styles*/
 .header-resume {
     margin-bottom: 10px;
 }
 
+/*Left-part with the photo*/
 #photo {
     padding: 16px;
     text-align: center;
@@ -116,7 +57,7 @@ a:hover {
     border: 4px solid #DBB2B2;
 }
 
-
+/*Right-part with name and job*/
 .header-resume .row-header .light {
     display: flex;
     flex-direction: column;
@@ -160,7 +101,7 @@ h1 {
     background: #DBB2B2;
 }
 
-
+/*********CONTENT OF THE RESUME*********/
 /********PERSONAL INFO STYLE*********/
 /*Common styles*/
 #personal-information {
@@ -183,14 +124,56 @@ h1 {
     color: #EEC0C0;
 }
 
-#contact-mobile-collapsed, #about-mobile-collapsed, #hobbies-mobile-collapsed {
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+}
+
+button {
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #47464B;
+    color: #EEC0C0;
+    border: none;
+    width: 100%;
+    position: relative;
+}
+
+button .arrow {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+button .arrow i {
+    transform: rotate(180deg);
+    transition: 0.2s all ease-in-out;
+}
+
+button.collapsed .arrow i {
+    transform: rotate(0deg);
+}
+
+button:focus {
+    outline: none;
+}
+
+#contact-mobile-tablet-collapsed, #about-mobile-tablet-collapsed, #hobbies-mobile-tablet-collapsed {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 ul {
-    padding: 0;
     list-style-type: none;
+}
+
+ul, .about-me {
+    padding: 0 40px;
 }
 
 /*Contact section style */
@@ -207,10 +190,6 @@ ul {
     flex-grow: 1;
 }
 
-ul, .about-me {
-    padding: 0 50px;
-}
-
 #about blockquote {
     margin-top: 20px;
     padding: 0 50px;
@@ -222,22 +201,22 @@ ul, .about-me {
 /*Hobbies section style*/
 .my-hobbies {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style-type: none;
 }
 
 .my-hobbies i {
-    font-size: 45px;
+    font-size: 32px;
     color: #47464B;
-    line-height: 70px;
+    line-height: 60px;
 }
 
 .hobby-circle {
     display: block;
     border-radius: 50%;
     border: 1px solid #47464B;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     text-align: center;
 }
 
@@ -252,7 +231,6 @@ ul, .about-me {
     margin-top: 40px;
 }
 
-
 #professional-information .date .circle {
     font-size: 13px;
     padding-top: 3px;
@@ -263,7 +241,6 @@ ul, .about-me {
     font-style: italic;
 
 }
-
 
 #professional-information h2 {
     border-bottom: 2px solid #EEC0C0;
@@ -306,37 +283,36 @@ ul, .about-me {
 }
 
 
-/************************RESUME STYLE FOR TABLETS************************/
+/************************TABLETS OVERRIDE STYLE************************/
 @media (min-width: 768px) {
 
+    /*********CONTENT OF THE RESUME*********/
+    /********PROFESSIONAL INFO STYLE*********/
+    /*Common style*/
+    #professional-information {
+        margin-top: 35px;
+    }
 }
 
-/************************RESUME STYLE FOR DESKTOPS************************/
+/************************DESKTOPS OVERRIDE STYLE************************/
 @media (min-width: 992px) {
 
-    /********COMMON STYLES********/
-    .row-header .light, .row-content .light {
-        padding-left: 60px;
+    /********PAGE HEADER STYLE********/
+    /*Common styles*/
+    .colored, .colored-desktop {
+        background-color: #EEC0C0;
     }
 
     .header-resume {
         margin-bottom: 0;
     }
 
-    button {
-        pointer-events: none;
-        cursor: default;
+    /*Left-part with the photo*/
+    #photo {
+        padding: 40px;
     }
 
-    button .arrow {
-        display: none;
-    }
-
-    /********PAGE HEADER STYLE********/
-    .colored, .colored-except-mobile {
-        background-color: #EEC0C0;
-    }
-
+    /*Right-part with name and job*/
     .header-resume .row-header .light {
         align-items: stretch;
     }
@@ -353,11 +329,9 @@ ul, .about-me {
         font-weight: 600;
     }
 
-    #photo {
-        padding: 40px;
-    }
-
+    /*********CONTENT OF THE RESUME*********/
     /********PERSONAL INFO STYLE*********/
+    /*Common style*/
     .my-info {
         display: flex;
     }
@@ -366,7 +340,29 @@ ul, .about-me {
         margin-bottom: 30px;
     }
 
-    #contact-mobile-collapsed, #about-mobile-collapsed, #hobbies-mobile-collapsed {
+    .row-header .light, .row-content .light {
+        padding-left: 60px;
+    }
+
+    /*These blocks of info must be visible all the time in desktops because there isn't collasped sections in desktops*/
+    .collapse.dont-collapse-lg {
+        display: block;
+        height: auto !important;
+        visibility: visible;
+    }
+
+    /*No collapsed sections in desktops so the buttons are deactivated*/
+    button {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    /*No collapsed sections in desktops so no need to see the arrows*/
+    button .arrow {
+        display: none;
+    }
+
+    #contact-mobile-tablet-collapsed, #about-mobile-tablet-collapsed, #hobbies-mobile-tablet-collapsed {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -381,7 +377,19 @@ ul, .about-me {
         margin-bottom: 30px;
     }
 
+    .hobby-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .my-hobbies i {
+        font-size: 45px;
+        line-height: 70px;
+    }
+
+
     /********PROFESSIONAL INFO STYLE*********/
+    /*Common style*/
     #professional-information {
         margin-top: 0px;
     }
@@ -404,6 +412,7 @@ ul, .about-me {
         font-style: normal;
     }
 
+    /*References section style*/
     .reference {
         margin-bottom: 40px;
     }
