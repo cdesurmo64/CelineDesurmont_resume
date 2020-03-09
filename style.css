@@ -7,7 +7,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /***********STYLE FOR MOBILE************/
-
 /*Common styles*/
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -98,7 +97,7 @@ h1 {
     bottom: 0;
     height: 1px;
     width: 45%;
-    background: #DBB2B2;
+    background: #EEC0C0;
 }
 
 /*********CONTENT OF THE RESUME*********/
@@ -120,7 +119,7 @@ h1 {
 .dark {
     text-align: center;
     margin-bottom: 3px;
-    background-color: #47464B;
+    background-color: #5B5561;
     color: #EEC0C0;
 }
 
@@ -135,7 +134,7 @@ h1 {
 button {
     font-size: 25px;
     font-weight: 700;
-    background-color: #47464B;
+    background-color: #67606E;
     color: #EEC0C0;
     border: none;
     width: 100%;
@@ -192,7 +191,7 @@ ul, .about-me {
 
 #about blockquote {
     margin-top: 20px;
-    padding: 0 50px;
+    padding: 0 40px;
     text-align: justify;
     font-style: italic;
     font-size: 12px;
@@ -207,14 +206,14 @@ ul, .about-me {
 
 .my-hobbies i {
     font-size: 32px;
-    color: #47464B;
+    color: #5B5561;
     line-height: 60px;
 }
 
 .hobby-circle {
     display: block;
     border-radius: 50%;
-    border: 1px solid #47464B;
+    border: 1px solid #67606E;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -249,10 +248,10 @@ ul, .about-me {
 }
 
 #professional-information h2 i {
-    margin-right: 30px;
-    font-size: 34px;
+    margin-right: 16px;
+    font-size: 30px;
     position: relative;
-    top: 5px;
+    top: 3px;
 }
 
 #professional-information i {
@@ -263,9 +262,12 @@ ul, .about-me {
     margin-bottom: 60px;
 }
 
+/*Professional experience section style*/
+.dont-show-mobile {
+    display: none;
+}
 
 /*References section style*/
-
 #ref2 {
     margin-bottom: 40px;
 }
@@ -292,6 +294,18 @@ ul, .about-me {
     #professional-information {
         margin-top: 35px;
     }
+
+    #professional-information h2 i {
+        margin-right: 30px;
+        font-size: 34px;
+        top: 5px;
+    }
+
+    /*Professional experience section style*/
+    .dont-show-mobile {
+        display: initial;
+    }
+
 }
 
 /************************DESKTOPS OVERRIDE STYLE************************/
@@ -344,20 +358,20 @@ ul, .about-me {
         padding-left: 60px;
     }
 
-    /*These blocks of info must be visible all the time in desktops because there isn't collasped sections in desktops*/
+    /*These blocks of info must be visible all the time in desktops because there isn't collasped sections in desktops : */
     .collapse.dont-collapse-lg {
         display: block;
         height: auto !important;
         visibility: visible;
     }
 
-    /*No collapsed sections in desktops so the buttons are deactivated*/
+    /*No collapsed sections in desktops so the buttons are deactivated : */
     button {
         pointer-events: none;
         cursor: default;
     }
 
-    /*No collapsed sections in desktops so no need to see the arrows*/
+    /*No collapsed sections in desktops so no need to see the arrows : */
     button .arrow {
         display: none;
     }
